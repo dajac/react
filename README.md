@@ -1,4 +1,5 @@
 # react
+[![Build Status](https://secure.travis-ci.org/dajac/react.png)](http://travis-ci.org/dajac/react)
 
 Reactive programming for Clojure.
 
