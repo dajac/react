@@ -5,7 +5,9 @@ Reactive programming for Clojure.
 
 ## Installation
 
-FIXME
+```clojure
+[react "0.0.1"]
+```
 
 ## Usage
 
