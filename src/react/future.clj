@@ -25,7 +25,7 @@
   IPromise
   (complete [this value]
     (let [{:keys [status waitq] :as s} @state]
-      (condp = status
+      (case status
         :pending   (if (compare-and-set! state s {:status :completed
                                                   :data   value})
                        (do (.countDown latch)
@@ -45,7 +45,7 @@
       ; CAS - lock free!
       ((fn add-or-run [f]
         (let [{:keys [status data waitq] :as s} @state]
-          (condp = status
+          (case status
             :pending   (when-not (compare-and-set! state s {:status :pending
                                                             :waitq  (conj waitq f)})
                          (recur f))
