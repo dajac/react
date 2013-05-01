@@ -1,4 +1,4 @@
-(defproject react "0.0.1"
+(defproject react "0.0.2-SNAPSHOT"
   :description "Reactive programming in Clojure"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
